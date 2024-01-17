@@ -1,0 +1,74 @@
+.todo-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  font-size: 1em;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 29px;
+  padding-right: 100px;
+  padding-left: 100px;
+  font-family: 'PressStart2P', sans-serif;
+  z-index: 1000;
+  background-color: #512525d7;
+  border-radius: 25px;
+  transition: 0.5s ease;
+}
+.todo-container:hover {
+  transform: translate(-50%, -50%) scale(1.05); /* Scale up on hover */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.101); /* Add box shadow on hover */
+}
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 70%;
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  background-color: #ffffff;
+  font-family: 'PressStart2P', sans-serif;
+  color: #773232;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: #773232;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #fff; /* Add border */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  white-space: wrap;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  background-color: #2f17177a;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px rgba(246, 246, 246, 0.452); /* Add box shadow */
+}
+
+li button {
+  background-color: #762424b4;
+  border: 1px solid #fff; /* Add border */
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}

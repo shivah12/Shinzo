@@ -1,0 +1,84 @@
+
+
+.pomodoro-timer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  font-size: 1em;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 29px;
+  padding-right: 100px;
+  padding-left: 100px;
+  font-family: 'PressStart2P', sans-serif;
+  z-index: 1000;
+  background-color: #512525d7;
+  border-radius: 25px;
+  transition: 0.5s ease;
+}
+
+.pomodoro-timer:hover {
+  transform: translate(-50%, -50%) scale(1.05); /* Scale up on hover */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.101); /* Add box shadow on hover */
+}
+
+.timer-display {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.slider-container {
+  margin-top: 20px;
+}
+
+.slider-container label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.timer-controls button {
+  font-size: 1em;
+  padding: 12px 12px;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: rgba(24, 9, 9, 0.667);
+  border: #fff solid 1px;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+}
+
+.timer-controls button:hover {
+  background-color: #3a27279c;
+  transition: 0.3s ease;
+}
+
+.button1,
+.button2 {
+  display: inline-block; /* Display buttons in the same row */
+}
+
+.button1 {
+  padding: 12px 12px;
+  text-transform: uppercase;
+  background-color: #773232;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #fff; /* Add border */
+}
+
+.button2 {
+  padding: 12px 12px;
+  text-transform: uppercase;
+  background-color: #773232;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #fff; /* Add border */
+}

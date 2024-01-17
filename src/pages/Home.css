@@ -1,0 +1,70 @@
+.users-container {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  font-size: 1em;
+  text-align: center;
+  white-space: nowrap;
+  padding: 29px;
+  padding-right: 100px;
+  padding-left: 100px;
+  font-family: 'PressStart2P', sans-serif;
+  z-index: 1000;
+  
+}
+
+.title {
+  cursor: pointer;
+  /* You can add more styles if needed */
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.giphy-container {
+  display: inline-block;
+  /* Initially hide the container */
+}
+
+.giphy-container img {
+  width: 100%;
+  max-width: 200px;
+  /* Adjust the size based on your preference */
+}
+
+.message-container {
+  position: absolute;
+  top:0%;
+  left:70%;
+  background-color: #773232;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.message-container p {
+  font-size: 14px;
+  color: #fff;
+  text-align: center; /* Center the text within the message box */
+}
+
+.show-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button3 {
+  position: absolute;
+  top:20%;
+  left:70%;
+  background-color: #773232;
+  padding: 10px;
+  border-radius: 10px;
+}
