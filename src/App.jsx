@@ -1,5 +1,5 @@
 import "./App.css";
-import SideBar from "./pages/Sidebar";
+import SideBar from "./pages/SideBar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import PomodoroTimer from "./pages/PomodoroTimer";
