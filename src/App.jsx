@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import "./App.css";
-import SideBar from "./components/SideBar";
+import SideBar from "./pages/SideBar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import PomodoroTimer from "./pages/PomodoroTimer";
