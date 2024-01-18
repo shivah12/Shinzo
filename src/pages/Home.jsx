@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div className="users-container">
       <div className="title" onClick={() => setShowMessage(!showMessage)}>
-        {showMessage || <button className='button3' onClick={deliverMessage}>Deliver Message</button>}
+        {showMessage || <button className='button3' onClick={deliverMessage}>Click Me!</button>}
       </div>
 
       <div className={`giphy-container ${showMessage }`}>
