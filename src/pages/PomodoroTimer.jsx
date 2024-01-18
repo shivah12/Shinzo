@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import './PomodoroTimer.css';
 
 const PomodoroTimer = () => {
-  const [minutes, setMinutes] = useState(25);
+  const initialMinutes = parseInt(localStorage.getItem('pomodoroMinutes')) || 25;
+  const [minutes, setMinutes] = useState(initialMinutes);
   const [seconds, setSeconds] = useState(0);
   const [isActive, setIsActive] = useState(false);
-  const [sliderValue, setSliderValue] = useState(25);
+  const [sliderValue, setSliderValue] = useState(initialMinutes);
 
   useEffect(() => {
     setMinutes(sliderValue);
@@ -38,6 +39,11 @@ const PomodoroTimer = () => {
     return () => clearInterval(interval);
   }, [isActive, minutes, seconds, sliderValue]);
 
+  useEffect(() => {
+    // Save current minutes to localStorage whenever it changes
+    localStorage.setItem('pomodoroMinutes', minutes.toString());
+  }, [minutes]);
+
   const toggleTimer = () => {
     setIsActive((prevIsActive) => !prevIsActive);
   };
@@ -49,7 +55,9 @@ const PomodoroTimer = () => {
   };
 
   const handleSliderChange = (event) => {
-    setSliderValue(parseInt(event.target.value, 10));
+    const newValue = parseInt(event.target.value, 10);
+    setSliderValue(newValue);
+    setMinutes(newValue);
   };
 
   return (
