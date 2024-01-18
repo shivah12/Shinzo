@@ -39,11 +39,6 @@ const PomodoroTimer = () => {
     return () => clearInterval(interval);
   }, [isActive, minutes, seconds, sliderValue]);
 
-  useEffect(() => {
-    // Save current minutes to localStorage whenever it changes
-    localStorage.setItem('pomodoroMinutes', minutes.toString());
-  }, [minutes]);
-
   const toggleTimer = () => {
     setIsActive((prevIsActive) => !prevIsActive);
   };
@@ -58,6 +53,7 @@ const PomodoroTimer = () => {
     const newValue = parseInt(event.target.value, 10);
     setSliderValue(newValue);
     setMinutes(newValue);
+    localStorage.setItem('pomodoroMinutes', newValue.toString()); // Save to localStorage
   };
 
   return (
