@@ -1,11 +1,12 @@
+import React, { useEffect, useRef } from 'react';
 import "./App.css";
-import SideBar from "./pages/SideBar";
+import SideBar from "./components/SideBar";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import PomodoroTimer from "./pages/PomodoroTimer";
 import AnalogClock from "./pages/AnalogClock";
 import Todo from "./pages/Todo";
-import Footer from "./pages/Footer"
+import Footer from "./pages/Footer";
 import backgroundAudio from "./assets/audio.mp3"; // Replace with the correct path
 
 function VideoMessage() {
@@ -20,17 +21,28 @@ function VideoMessage() {
 }
 
 function App() {
+  const audioRef = useRef(null);
+
+  useEffect(() => {
+    // Play audio when the component mounts
+    if (audioRef.current) {
+      audioRef.current.play().catch(error => {
+        // Autoplay was prevented, handle the error
+        console.error('Autoplay prevented:', error);
+      });
+    }
+  }, []);
+
   return (
     <>
       <Router>
         <div className="App">
-          <audio autoPlay loop controls={false}>
+          <SideBar />
+          <audio ref={audioRef} loop>
             <source src={backgroundAudio} type="audio/mp3" />
             Your browser does not support the audio tag.
           </audio>
-          
-          <SideBar />
-          
+
           <div className="content">
             <Routes>
               <Route path="/" element={<><Home /><AnalogClock /></>} />
@@ -39,11 +51,11 @@ function App() {
               <Route path="*" element={<div>not found</div>} />
             </Routes>
           </div>
-          <Footer /> 
+          <Footer />
         </div>
       </Router>
     </>
   );
 }
 
-export default App;
+export default App
