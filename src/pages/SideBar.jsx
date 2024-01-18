@@ -90,7 +90,7 @@ const SideBar = ({ children }) => {
                   exit="hidden"
                   className="logo"
                 >
-                  DoSomeCoding
+                  Let's Study!!
                 </motion.h1>
               )}
             </AnimatePresence>
