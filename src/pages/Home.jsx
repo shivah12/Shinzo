@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import './Home.css';
-import audioFile from '../assets/audio.mp3';
+import audioFile from './assets/audio.mp3';
 
 const Home = () => {
   const [showMessage, setShowMessage] = useState(false);
