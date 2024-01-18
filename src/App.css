@@ -82,7 +82,7 @@ img {
 .sidebar {
   background: rgba(91, 43, 43, 0.542);
   color: white;
-  height: 65vh;
+  height: 55vh;
   overflow-y: auto;
   padding: 45px 35px;
   padding-left: 10px;
@@ -170,6 +170,7 @@ img {
   padding-left: 20px;
   border-bottom: #fff 0.5px solid;
 }
+/*Todolist*/
 .todo-container {
   max-width: 400px;
   margin: 20px;
