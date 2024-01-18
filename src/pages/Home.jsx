@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import './Home.css';
-import audioFile from './assets/audio.mp3';
+
 
 const Home = () => {
   const [showMessage, setShowMessage] = useState(false);
@@ -9,13 +9,8 @@ const Home = () => {
   const deliverMessage = () => {
     setShowMessage(true);
 
-    // Play audio
-    if (audioRef.current) {
-      audioRef.current.play().catch((error) => {
-        console.error('Autoplay prevented:', error);
-      });
-    }
-  };
+
+    
 
   return (
     <div className="users-container">
@@ -43,11 +38,7 @@ const Home = () => {
         )}
       </div>
 
-      {/* Audio Element */}
-      <audio ref={audioRef}>
-        <source src={audioFile} type="audio/mp3" />
-        Your browser does not support the audio tag.
-      </audio>
+      
     </div>
   );
 };
