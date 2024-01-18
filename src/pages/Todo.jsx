@@ -1,10 +1,11 @@
-
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Todo.css'; // Import the CSS file
+import taskAddedSound from '../assets/audio.mp3'; // Import the audio file
 
 const Todo = () => {
   const [tasks, setTasks] = useState([]);
   const [taskInput, setTaskInput] = useState('');
+  const audioRef = useRef(null);
 
   // Load tasks from local storage on component mount
   useEffect(() => {
@@ -20,6 +21,11 @@ const Todo = () => {
       setTasks(updatedTasks);
       localStorage.setItem('tasks', JSON.stringify(updatedTasks));
       setTaskInput('');
+
+      // Play the audio when a task is added
+      if (audioRef.current) {
+        audioRef.current.play();
+      }
     }
   };
 
@@ -50,6 +56,10 @@ const Todo = () => {
         />
         <button onClick={addTask}>Add Task</button>
       </div>
+      <audio ref={audioRef}>
+        <source src={taskAddedSound} type="audio/mp3" />
+        Your browser does not support the audio tag.
+      </audio>
       <ul>
         {tasks.map((task, index) => (
           <li key={index}>
