@@ -6,7 +6,7 @@ import PomodoroTimer from "./pages/PomodoroTimer";
 import AnalogClock from "./pages/AnalogClock";
 import Todo from "./pages/Todo";
 import Footer from "./pages/Footer"
-import backgroundAudio from "./public/audio.mp3"; // Replace with the correct path
+import backgroundAudio from "./audio.mp3"; // Replace with the correct path
 
 function VideoMessage() {
   return (
