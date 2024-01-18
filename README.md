@@ -7,6 +7,6 @@ To use it:
 <li> To install the necessary node modules : npm install </li>
 <li>To start the development server using npm run dev</li>
 <li>To install Material UI components: npm install @mui/material @emotion/react @emotion/styled </li>
-<li>To implement the Framer : npm install framer-motion</li>To implement the Framer : npm install framer-motion
+<li>To implement the Framer : npm install framer-motion</li>
 </ul>
 
