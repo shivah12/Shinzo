@@ -10,10 +10,30 @@
  <p>Working on setting up a backend server, for keeping the record of the users and their personal records created on the website.</p>
 <h2>To use it:</h2>
 <ul>
- <li>Create a new project using npm create vite@latest</li> 
-<li> To install the necessary node modules : npm install </li>
-<li>To start the development server using npm run dev</li>
-<li>To install Material UI components: npm install @mui/material @emotion/react @emotion/styled </li>
-<li>To implement the Framer : npm install framer-motion</li>
+ <li>Create a new project using </li> 
+
+ ```
+npm create vite@latest
+```
+<li> To install the necessary node modules  </li>
+
+```
+npm install
+```
+<li>To start the development server </li>
+
+```
+npm run dev
+```
+<li>To install Material UI components</li>
+
+```
+ npm install @mui/material @emotion/react @emotion/styled
+```
+<li>To implement the Framer </li>
+
+```
+ npm install framer-motion
+```
 </ul>
 <img src="shinzo.png" alt="ShinzoHome">
